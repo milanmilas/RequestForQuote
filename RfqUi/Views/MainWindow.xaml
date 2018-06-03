@@ -1,0 +1,13 @@
+﻿<Window x:Class="RfqUi.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:RfqUi.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <!--<controls:Arc StrokeThickness="50" Stroke="Orange" Direction="Counterclockwise" StartAngle="60" EndAngle="360" ></controls:Arc>-->
+        <controls:ElipticProgressBar Background="Gray" BarTickness="30" BarColor="Orange" Direction="Clockwise" MaxValue="6" Progress="{Binding  Progress}"/>
+    </Grid>
+</Window>

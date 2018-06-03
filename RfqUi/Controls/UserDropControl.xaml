@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="RfqUi.Controls.UserDropControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RfqUi.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="190*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Rotation" Background="Aquamarine"></TextBlock>
+        <Border Grid.Row="1" Grid.Column="1" Background="Yellow"/>
+        <Label MouseDown="UIElement_OnMouseDown">To drop</Label>
+        <Button Grid.Row="1" Grid.Column="1" Background="Green" Content="Click Mee" MouseDown="Button_MouseDown">
+
+            <Button.LayoutTransform>
+                <RotateTransform Angle="25"></RotateTransform>
+            </Button.LayoutTransform>
+        </Button>
+        <Label AllowDrop="True" Grid.Row="2" Drop="Label_Drop">To be dropped</Label>
+        <Button AllowDrop="True" Grid.Row="2" Grid.Column="1" Background="Yellow" Margin="25" Drop="Button_Drop">Drop me here</Button>
+    </Grid>
+</UserControl>
