@@ -33,9 +33,9 @@ namespace RfqUi.Controls
         }
 
         public static readonly DependencyProperty ArcAngleProperty = DependencyProperty.Register(
-             "ArcAngle", typeof(int), typeof(ElipticProgressBar), new PropertyMetadata(default(int)));
+             "ArcAngle", typeof(double), typeof(ElipticProgressBar), new PropertyMetadata(default(double)));
 
-        public int ArcAngle
+        public double ArcAngle
         {
             get { return (int)GetValue(ArcAngleProperty); }
             set { SetValue(ArcAngleProperty, value); }
@@ -74,24 +74,24 @@ namespace RfqUi.Controls
             {
                 arcAngle = 360 - angle;
 
-                arcAngle = value > control.MaxValue ? 1 : arcAngle;
-                arcAngle = arcAngle == 0 ? 1 : arcAngle;
+                //arcAngle = value > control.MaxValue ? 0 : arcAngle;
+                //arcAngle = arcAngle == 0 ? 1 : arcAngle;
             }
 
             if (control.Direction == SweepDirection.Counterclockwise)
             {
-                arcAngle = value > control.MaxValue ? 0 : arcAngle;
+                //arcAngle = value > control.MaxValue ? 0 : arcAngle;
             }
 
-            control.ArcAngle = arcAngle;
+            control.ArcAngle = arcAngle;// == 360 ? arcAngle-0.01 : arcAngle;
         }
 
         public static readonly DependencyProperty BarTicknessProperty = DependencyProperty.Register(
-            "BarTickness", typeof(int), typeof(ElipticProgressBar), new FrameworkPropertyMetadata(default(int)));
+            "BarTickness", typeof(double), typeof(ElipticProgressBar), new FrameworkPropertyMetadata(default(double)));
 
-        public int BarTickness
+        public double BarTickness
         {
-            get { return (int)GetValue(BarTicknessProperty); }
+            get { return (double)GetValue(BarTicknessProperty); }
             set { SetValue(BarTicknessProperty, value); }
         }
 

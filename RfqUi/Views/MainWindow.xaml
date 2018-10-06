@@ -9,5 +9,6 @@
     <Grid>
         <!--<controls:Arc StrokeThickness="50" Stroke="Orange" Direction="Counterclockwise" StartAngle="60" EndAngle="360" ></controls:Arc>-->
         <controls:ElipticProgressBar Background="Gray" BarTickness="30" BarColor="Orange" Direction="Clockwise" MaxValue="6" Progress="{Binding  Progress}"/>
+        <!--<controls:CircularProgress Stroke="Orange" StrokeThickness="5" Fill="Orange" Value="{Binding  Progress}" />-->
     </Grid>
 </Window>

@@ -68,6 +68,9 @@ namespace RfqUi.Controls
 
         private Geometry GetArcGeometry()
         {
+            if (StartAngle == EndAngle) {
+                EndAngle = StartAngle - 0.01;
+            }
             Point startPoint = PointAtAngle(Math.Min(StartAngle, EndAngle), Direction);
             Point endPoint = PointAtAngle(Math.Max(StartAngle, EndAngle), Direction);
 

@@ -36,7 +36,7 @@ namespace RfqUi.ViewModels
 
         private void TimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
         {
-            Progress++;
+            Progress+=10;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

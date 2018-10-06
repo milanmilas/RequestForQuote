@@ -79,6 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controls\Arc.cs" />
+    <Compile Include="Controls\CircularProgress.cs" />
     <Compile Include="Controls\ElipticProgressBar.cs" />
     <Compile Include="Controls\UserDropControl.xaml.cs">
       <DependentUpon>UserDropControl.xaml</DependentUpon>
